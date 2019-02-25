@@ -1,0 +1,60 @@
+{
+  "name": "generator-gemod",
+  "version": "0.0.1-alpha",
+  "description": "Opiniotated node module generator",
+  "license": "MIT",
+  "repository": "george-aidonidis/generator-gemod",
+  "author": {
+    "name": "George Aidonidis",
+    "email": "georgeaidonidis@gmail.com",
+    "url": "https://georgeaidonidis.com"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "plugin",
+    "boilerplate",
+    "template",
+    "scaffold",
+    "node",
+    "module",
+    "node_module",
+    "node-module",
+    "init"
+  ],
+  "dependencies": {
+    "humanize-url": "^1.0.1",
+    "is-scoped": "^1.0.0",
+    "normalize-url": "^3.3.0",
+    "superb": "^3.0.0",
+    "underscore.string": "^3.0.3",
+    "yeoman-generator": "^3.1.1"
+  },
+  "devDependencies": {
+    "jest": "^24.1.0",
+    "yeoman-assert": "^3.0.0",
+    "yeoman-test": "^1.0.0"
+  },
+  "jest": {
+    "setupFiles": [
+      "./app/setup-test"
+    ],
+    "testPathIgnorePatterns": [
+      "temp",
+      "templates"
+    ]
+  },
+  "xo": {
+    "ignores": [
+      "app/templates/**"
+    ]
+  }
+}
