@@ -1,0 +1,27 @@
+{
+	"name": "<%= moduleName %>",
+	"version": "0.0.0",
+	"description": "<%= moduleDescription %>",
+	"license": "MIT",
+	"repository": "<%= githubUsername %>/<%= repoName %>",
+	"author": {
+		"name": "<%= name %>",
+		"email": "<%= email %>",
+		"url": "<%= humanizedWebsite %>"
+	},
+	"engines": {
+		"node": ">=6"
+	},
+	"scripts": {
+		"test": "xo && jest <% if (codecoverage) { %>--coverage<% } %>"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [ ],
+	"devDependencies": {
+		"xo": "^0.21.0",
+		"jest": "^24"<% if (codecov) { %>,
+		"codecov": "^3.0.0"<% } %>
+	}
+}

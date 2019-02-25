@@ -1,4 +1,4 @@
-# generator-nm [![Build Status](https://travis-ci.org/George-Aidonidis/generator-gemod.svg?branch=master)](https://travis-ci.org/George-Aidonidis/generator-gemod)
+# generator-nm [![Build Status](https://travis-ci.org/George-Aidonidis/generator-gemod.svg?branch=master)](https://travis-ci.org/George-Aidonidis/generator-gemod) [![NPM version](https://img.shields.io/npm/v/@george-aidonidis/generator-gemod.svg?style=flat)](https://www.npmjs.com/package/@george-aidonidis/generator-gemod)
 
 > Scaffold out a [node module](https://github.com/george-aidonidis/generator-gemod)
 
