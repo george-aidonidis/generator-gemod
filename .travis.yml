@@ -1,5 +1,14 @@
 language: node_js
 node_js:
-  - '10'
-  - '8'
-  - '6'
+  - 'node'
+script:
+  - yarn test
+cache:
+  directories:
+    - node_modules
+deploy:
+  provider: yarn
+  email: george.aidonidis@gmail.com
+  api_key: $NPM_TOKEN
+  on:
+    tags: true
