@@ -1,6 +1,6 @@
-# generator-nm [![Build Status](https://travis-ci.org/george-aidonidis/generator-gemod.svg?branch=master)](https://travis-ci.org/george-aidonidis/generator-gemod)
+# generator-nm [![Build Status](https://travis-ci.org/George-Aidonidis/generator-gemod.svg?branch=master)](https://travis-ci.org/George-Aidonidis/generator-gemod)
 
-> Scaffold out a [node module](https://github.com/george-aidonidis/gemod)
+> Scaffold out a [node module](https://github.com/george-aidonidis/generator-gemod)
 
 ## Install
 
