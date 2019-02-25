@@ -8,7 +8,7 @@ let generator;
 
 beforeAll(async () => {
   await pify(helpers.testDirectory)(path.join(__dirname, 'temp'));
-  generator = helpers.createGenerator('mod:app', ['../'], null, {
+  generator = helpers.createGenerator('gemod:app', ['../'], null, {
     skipInstall: true,
     yarn: true,
     npm: false,
