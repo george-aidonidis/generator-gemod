@@ -13,15 +13,46 @@
 		"node": ">=6"
 	},
 	"scripts": {
-		"test": "xo && jest <% if (codecoverage) { %>--coverage<% } %>"
+		"lint": "xo",
+		"test": "jest"<% if (codecov) { %>,
+		"codecov": "codecov"<% } %>
 	},
 	"files": [
 		"index.js"
 	],
 	"keywords": [ ],
 	"devDependencies": {
-		"xo": "^0.21.0",
+		"husky": "^1.3.1",
+		"lint-staged": "^8.1.4",
+		"xo": "^0.24.0",
 		"jest": "^24"<% if (codecov) { %>,
-		"codecov": "^3.0.0"<% } %>
+		"codecov": "^3.2.0"<% } %>
+	},
+  "jest": {<% if (codecov) { %>
+    "coverageDirectory": "./coverage/",
+		"collectCoverage": true<% } %>
+	},
+	"lint-staged": {
+		"*": [
+			"xo --fix",
+			"git add"
+		]
+	},
+	"xo": {
+		"prettier": true,
+		"envs": [
+			"jest",
+			"node",
+			"browser"
+		],
+		"rules": {
+			"camelcase": 1
+		}
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged",
+			"pre-push": "yarn test"
+		}
 	}
 }
