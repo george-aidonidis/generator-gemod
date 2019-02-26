@@ -51,7 +51,6 @@
 	},
 	"jest": {
 		"coverageDirectory": "./coverage/",
-		"collectCoverage": true,
 		"setupFiles": [
 			"./app/setup-test"
 		],
