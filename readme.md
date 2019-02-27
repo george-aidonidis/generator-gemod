@@ -2,7 +2,7 @@
 
 > Scaffold out a [node module](https://github.com/george-aidonidis/generator-gemod)
 
-![gif](https://i.imgur.com/igslKGr.gif)
+![gif](https://i.imgur.com/o12gQRh.gif)
 
 ## Install
 
