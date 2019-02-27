@@ -16,6 +16,11 @@ module.exports = class extends Generator {
 	constructor(...args) {
 		super(...args);
 
+		this.option('org', {
+			type: String,
+			description: 'Publish to a GitHub organization account',
+		});
+
 		this.option('coverage', {
 			type: Boolean,
 			description: 'Add code coverage with jest and upload to codecov.io',
@@ -40,6 +45,7 @@ module.exports = class extends Generator {
 				message: 'What is your GitHub username?',
 				store: true,
 				validate: validate('username'),
+				when: () => !this.options.org,
 			},
 			{
 				name: 'website',
@@ -64,7 +70,7 @@ module.exports = class extends Generator {
 				moduleName: props.moduleName,
 				moduleDescription: props.moduleDescription,
 				camelModuleName: camelize(repoName),
-				githubUsername: props.githubUsername,
+				githubUsername: this.options.org || props.githubUsername,
 				repoName,
 				name: this.user.git.name(),
 				email: this.user.git.email(),
