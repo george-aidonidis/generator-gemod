@@ -28,8 +28,7 @@ $ yo gemod --help
     --help          # Print the generator's options and usage
     --skip-cache    # Do not remember prompt answers                      Default: false
     --skip-install  # Do not automatically install dependencies           Default: false
-    --coverage      # Add jest's code coverage
-    --codecov       # Upload coverage to codecov.io (implies --coverage)
+    --coverage      # Add jest's code coverage (uploads to codecov.io)
 ```
 
 ## License

@@ -2,7 +2,6 @@ const path = require('path');
 const helpers = require('yeoman-test');
 const assert = require('yeoman-assert');
 const pify = require('pify');
-const utils = require('./utils');
 
 let generator;
 
@@ -37,30 +36,12 @@ describe('Mod Generator', () => {
 			'.npmrc',
 		]);
 	});
-	it('codecoverage option', async () => {
+	it('coverage option', async () => {
 		helpers.mockPrompt(generator, {
 			moduleName: 'test',
 			githubUsername: 'test',
 			website: 'test.com',
-			codecoverage: true,
-			codecov: false,
-		});
-
-		await pify(generator.run.bind(generator))();
-
-		assert.fileContent('.gitignore', /coverage/);
-		assert.fileContent('package.json', /"xo"/);
-		assert.noFileContent('package.json', /"codecov":/);
-		assert.noFileContent('.travis.yml', /codecov/);
-	});
-
-	it('codecov option', async () => {
-		helpers.mockPrompt(generator, {
-			moduleName: 'test',
-			githubUsername: 'test',
-			website: 'test.com',
-			codecoverage: true,
-			codecov: true,
+			coverage: true,
 		});
 
 		await pify(generator.run.bind(generator))();
@@ -77,8 +58,6 @@ describe('Mod Generator', () => {
 			moduleDescription: 'foo',
 			githubUsername: 'test',
 			website: 'test.com',
-			nyc: true,
-			codecov: true,
 		});
 
 		await pify(generator.run.bind(generator))();
@@ -93,20 +72,11 @@ describe('Mod Generator', () => {
 			githubUsername: 'test',
 			website: 'test.com',
 			nyc: true,
-			codecov: true,
 		});
 
 		await pify(generator.run.bind(generator))();
 
 		assert.fileContent('package.json', /"description": "My .+ module",/);
 		assert.fileContent('readme.md', /> My .+ module/);
-	});
-
-	it('parse scoped package names', () => {
-		expect(utils.slugifyPackageName('author/thing')).toEqual('author-thing');
-		expect(utils.slugifyPackageName('@author/thing')).toEqual('@author/thing');
-		expect(utils.slugifyPackageName('@author/hi/there')).toEqual(
-			'author-hi-there',
-		);
 	});
 });
