@@ -2,7 +2,9 @@ const superb = require('superb');
 const normalizeUrl = require('normalize-url');
 const humanizeUrl = require('humanize-url');
 const Generator = require('yeoman-generator');
-const _s = require('underscore.string');
+const camelize = require('camelcase');
+const slugify = require('@sindresorhus/slugify');
+
 const {
 	createRepoName,
 	slugifyPackageName,
@@ -25,7 +27,7 @@ module.exports = class extends Generator {
 			{
 				name: 'moduleName',
 				message: 'What do you want to name your module?',
-				default: _s.slugify(this.appname),
+				default: slugify(this.appname),
 				filter: slugifyPackageName,
 			},
 			{
@@ -61,7 +63,7 @@ module.exports = class extends Generator {
 			const tpl = {
 				moduleName: props.moduleName,
 				moduleDescription: props.moduleDescription,
-				camelModuleName: _s.camelize(repoName),
+				camelModuleName: camelize(repoName),
 				githubUsername: props.githubUsername,
 				repoName,
 				name: this.user.git.name(),
@@ -76,7 +78,7 @@ module.exports = class extends Generator {
 			};
 
 			this.fs.copyTpl(
-				[`${this.templatePath()}/**`, '!**/cli.js'],
+				[`${this.templatePath()}/**`],
 				this.destinationPath(),
 				tpl,
 			);

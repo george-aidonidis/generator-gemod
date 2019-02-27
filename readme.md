@@ -12,7 +12,7 @@ $ yarn global add yo generator-gemod
 
 ## Usage
 
-With [yo](https://github.com/yeoman/yo):
+With [yo](https://i.imgur.com/QKkTJSi.gif):
 
 ```
 $ yo gemod
@@ -30,6 +30,7 @@ $ yo gemod --help
     --help          # Print the generator's options and usage
     --skip-cache    # Do not remember prompt answers                      Default: false
     --skip-install  # Do not automatically install dependencies           Default: false
+		--org           # Publish to a GitHub organization account
     --coverage      # Add jest's code coverage (uploads to codecov.io)
 ```
 

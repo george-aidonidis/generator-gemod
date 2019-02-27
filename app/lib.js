@@ -1,7 +1,18 @@
-const {T, has, ifElse, pipe, length, lt, split, identity} = require('ramda');
-const {slugify} = require('underscore.string');
+const {
+	T,
+	has,
+	ifElse,
+	pipe,
+	length,
+	lt,
+	split,
+	identity,
+	unary,
+} = require('ramda');
+const slugify = require('@sindresorhus/slugify');
 const isScoped = require('is-scoped');
 
+const uSlugify = unary(slugify);
 exports.createRepoName = ifElse(
 	isScoped,
 	pipe(
@@ -11,7 +22,7 @@ exports.createRepoName = ifElse(
 	identity,
 );
 
-exports.slugifyPackageName = ifElse(isScoped, identity, slugify);
+exports.slugifyPackageName = ifElse(isScoped, identity, uSlugify);
 
 exports.validate = option =>
 	ifElse(

@@ -33,12 +33,13 @@
 		"init"
 	],
 	"dependencies": {
+		"@sindresorhus/slugify": "^0.8.0",
+		"camelcase": "^5.0.0",
 		"humanize-url": "^1.0.1",
 		"is-scoped": "^1.0.0",
 		"normalize-url": "^3.3.0",
 		"ramda": "^0.26.1",
 		"superb": "^3.0.0",
-		"underscore.string": "^3.0.3",
 		"yeoman-generator": "^3.1.1"
 	},
 	"devDependencies": {
