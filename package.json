@@ -1,6 +1,6 @@
 {
 	"name": "generator-gemod",
-	"version": "0.1.2",
+	"version": "0.2.0",
 	"description": "Opinionated node module generator",
 	"license": "MIT",
 	"repository": "george-aidonidis/generator-gemod",
