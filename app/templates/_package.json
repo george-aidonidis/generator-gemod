@@ -14,7 +14,7 @@
 	},
 	"scripts": {
 		"lint": "xo",
-		"test": "jest"<% if (codecov) { %>,
+		"test": "jest"<% if (coverage) { %>,
 		"codecov": "codecov"<% } %>
 	},
 	"files": [
@@ -25,10 +25,10 @@
 		"husky": "^1.3.1",
 		"lint-staged": "^8.1.4",
 		"xo": "^0.24.0",
-		"jest": "^24"<% if (codecov) { %>,
+		"jest": "^24"<% if (coverage) { %>,
 		"codecov": "^3.2.0"<% } %>
 	},
-  "jest": {<% if (codecov) { %>
+  "jest": {<% if (coverage) { %>
     "coverageDirectory": "./coverage/",
 		"collectCoverage": true<% } %>
 	},

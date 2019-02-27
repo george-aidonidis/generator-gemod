@@ -3,7 +3,12 @@ const normalizeUrl = require('normalize-url');
 const humanizeUrl = require('humanize-url');
 const Generator = require('yeoman-generator');
 const _s = require('underscore.string');
-const utils = require('./utils');
+const {
+	createRepoName,
+	slugifyPackageName,
+	validate,
+	hasCoverage,
+} = require('./lib');
 
 module.exports = class extends Generator {
 	constructor(...args) {
@@ -11,12 +16,7 @@ module.exports = class extends Generator {
 
 		this.option('coverage', {
 			type: Boolean,
-			description: 'Add code coverage with jest',
-		});
-
-		this.option('codecov', {
-			type: Boolean,
-			description: 'Upload coverage to codecov.io (implies coverage)',
+			description: 'Add code coverage with jest and upload to codecov.io',
 		});
 	}
 
@@ -26,7 +26,7 @@ module.exports = class extends Generator {
 				name: 'moduleName',
 				message: 'What do you want to name your module?',
 				default: _s.slugify(this.appname),
-				filter: x => utils.slugifyPackageName(x),
+				filter: slugifyPackageName,
 			},
 			{
 				name: 'moduleDescription',
@@ -37,44 +37,26 @@ module.exports = class extends Generator {
 				name: 'githubUsername',
 				message: 'What is your GitHub username?',
 				store: true,
-				validate: x => (x.length > 0 ? true : 'You have to provide a username'),
+				validate: validate('username'),
 			},
 			{
 				name: 'website',
 				message: 'What is the URL of your website?',
 				store: true,
-				validate: x =>
-					x.length > 0 ? true : 'You have to provide a website URL',
-				filter: x => normalizeUrl(x),
+				validate: validate('website URL'),
+				filter: normalizeUrl,
 			},
 			{
-				name: 'codecoverage',
+				name: 'coverage',
 				message: 'Do you need code coverage?',
 				type: 'confirm',
-				default: Boolean(this.options.codecov || this.options.coverage),
-				when: () =>
-					this.options.coverage === undefined &&
-					this.options.codecov === undefined,
-			},
-			{
-				name: 'codecov',
-				message: 'Upload coverage to codecov.io?',
-				type: 'confirm',
-				default: false,
-				when: x =>
-					(x.codecoverage || this.options.coverage) &&
-					this.options.codecov === undefined,
+				default: Boolean(this.options.coverage),
+				when: () => this.options.coverage === undefined,
 			},
 		]).then(props => {
-			const or = (option, prop) =>
-				this.options[option] === undefined
-					? props[prop || option]
-					: this.options[option];
+			const coverage = hasCoverage(this.options, props);
 
-			const codecov = or('codecov');
-			const codecoverage = codecov || or('coverage', 'codecoverage');
-
-			const repoName = utils.repoName(props.moduleName);
+			const repoName = createRepoName(props.moduleName);
 
 			const tpl = {
 				moduleName: props.moduleName,
@@ -86,8 +68,7 @@ module.exports = class extends Generator {
 				email: this.user.git.email(),
 				website: props.website,
 				humanizedWebsite: humanizeUrl(props.website),
-				codecoverage,
-				codecov,
+				coverage,
 			};
 
 			const mv = (from, to) => {
