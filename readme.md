@@ -30,9 +30,16 @@ $ yo gemod --help
     --help          # Print the generator's options and usage
     --skip-cache    # Do not remember prompt answers                      Default: false
     --skip-install  # Do not automatically install dependencies           Default: false
-		--org           # Publish to a GitHub organization account
+    --org           # Publish to a GitHub organization account
     --coverage      # Add jest's code coverage (uploads to codecov.io)
 ```
+
+## Development tools
+
+- Test things with [jest](https://jestjs.io)
+- Lint code with [xo](https://github.com/xojs/xo) and [prettier](https://github.com/xojs/xo)
+- Run linting before a git commit
+- Run tests before a git push
 
 ## Contributing
 
