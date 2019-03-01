@@ -6,7 +6,7 @@
 
 Generate files with sane defaults to reduce boilerplate
 
-![gif](https://i.imgur.com/o12gQRh.gif)
+![gif](https://i.imgur.com/Fg20x4s.gif)
 
 ## Install
 
@@ -16,7 +16,7 @@ $ yarn global add yo generator-gemod
 
 ## Usage
 
-With [yo](https://i.imgur.com/QKkTJSi.gif):
+With [yo](https://yeoman.io/):
 
 ```
 $ yo gemod
@@ -36,6 +36,7 @@ $ yo gemod --help
     --skip-install  # Do not automatically install dependencies           Default: false
     --org           # Publish to a GitHub organization account
     --coverage      # Add jest's code coverage (uploads to codecov.io)
+    --deploy        # Adds a step to travis to deploy the module to npm (needs a `$NPM_TOKEN` env variable on travis-ci)
 ```
 
 ## Development tools
