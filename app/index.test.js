@@ -36,6 +36,23 @@ describe('Mod Generator', () => {
 			'.npmrc',
 		]);
 	});
+	it('deploy option', async () => {
+		helpers.mockPrompt(generator, {
+			deploy: true,
+			moduleName: 'test',
+			githubUsername: 'test',
+			website: 'test.com',
+			coverage: true,
+		});
+
+		await pify(generator.run.bind(generator))();
+
+		assert.fileContent('.gitignore', /coverage/);
+		assert.fileContent('package.json', /"xo"/);
+		assert.fileContent('package.json', /"codecov":/);
+		assert.fileContent('.travis.yml', /codecov/);
+		assert.fileContent('.travis.yml', /deploy/);
+	});
 	it('coverage option', async () => {
 		helpers.mockPrompt(generator, {
 			moduleName: 'test',
@@ -50,6 +67,7 @@ describe('Mod Generator', () => {
 		assert.fileContent('package.json', /"xo"/);
 		assert.fileContent('package.json', /"codecov":/);
 		assert.fileContent('.travis.yml', /codecov/);
+		assert.noFileContent('.travis.yml', /deploy/);
 	});
 
 	it('prompts for description', async () => {

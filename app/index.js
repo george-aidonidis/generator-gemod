@@ -1,4 +1,5 @@
 const superb = require('superb');
+const {has} = require('ramda');
 const normalizeUrl = require('normalize-url');
 const humanizeUrl = require('humanize-url');
 const Generator = require('yeoman-generator');
@@ -9,12 +10,17 @@ const {
 	createRepoName,
 	slugifyPackageName,
 	validate,
-	hasCoverage,
+	hasProperty,
 } = require('./lib');
 
 module.exports = class extends Generator {
 	constructor(...args) {
 		super(...args);
+
+		this.option('deploy', {
+			type: String,
+			description: 'Add a deploy step on travis (needs $NPM_TOKEN configured)',
+		});
 
 		this.option('org', {
 			type: String,
@@ -61,10 +67,25 @@ module.exports = class extends Generator {
 				default: Boolean(this.options.coverage),
 				when: () => this.options.coverage === undefined,
 			},
+			{
+				name: 'deploy',
+				message: 'Do you need travis to deploy to npm?',
+				type: 'confirm',
+				default: Boolean(this.options.deploy),
+				when: () => this.options.deploy === undefined,
+			},
 		]).then(props => {
-			const coverage = hasCoverage(this.options, props);
-
+			const coverage = hasProperty('coverage')(this.options, props);
+			const deploy = hasProperty('deploy')(this.options, props);
 			const repoName = createRepoName(props.moduleName);
+			console.log(
+				`Deploy is : ${has('deploy')(this.options)} ${has('deploy')(props)}`,
+			);
+			console.log(
+				`Deploy is : ${has('coverage')(this.options)} ${has('coverage')(
+					props,
+				)}`,
+			);
 
 			const tpl = {
 				moduleName: props.moduleName,
@@ -77,6 +98,7 @@ module.exports = class extends Generator {
 				website: props.website,
 				humanizedWebsite: humanizeUrl(props.website),
 				coverage,
+				deploy,
 			};
 
 			const mv = (from, to) => {

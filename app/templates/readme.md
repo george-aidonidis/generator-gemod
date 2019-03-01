@@ -1,4 +1,6 @@
-# <%= repoName %> [![Build Status](https://travis-ci.org/<%= githubUsername %>/<%= repoName %>.svg?branch=master)](https://travis-ci.org/<%= githubUsername %>/<%= repoName %>) <% if (coverage) { %> [![codecov](https://codecov.io/gh/<%= githubUsername %>/<%= repoName %>/badge.svg?branch=master)](https://codecov.io/gh/<%= githubUsername %>/<%= repoName %>?branch=master)<% } %> [![NPM version](https://img.shields.io/npm/v/<%= repoName %>.svg?style=flat)](https://www.npmjs.com/package/<%= repoName %>)
+# <%= repoName %>
+
+[![Build Status](https://travis-ci.org/<%= githubUsername %>/<%= repoName %>.svg?branch=master)](https://travis-ci.org/<%= githubUsername %>/<%= repoName %>) <% if (coverage) { %> [![codecov](https://codecov.io/gh/<%= githubUsername %>/<%= repoName %>/badge.svg?branch=master)](https://codecov.io/gh/<%= githubUsername %>/<%= repoName %>?branch=master)<% } %> [![NPM version](https://img.shields.io/npm/v/<%= repoName %>.svg?style=flat)](https://www.npmjs.com/package/<%= repoName %>)
 
 > <%= moduleDescription %>
 
