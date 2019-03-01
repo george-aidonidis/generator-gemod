@@ -1,6 +1,6 @@
 const {
 	T,
-	has,
+	prop,
 	ifElse,
 	pipe,
 	length,
@@ -34,6 +34,8 @@ exports.validate = option =>
 		() => `You have to provide a ${option}`,
 	);
 
-exports.hasCoverage = ifElse(has('coverage'), T, (_, props) =>
-	has('coverage')(props),
-);
+exports.hasProperty = key =>
+	pipe(
+		ifElse(prop(key), T, (_, props) => prop(key)(props)),
+		Boolean,
+	);

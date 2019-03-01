@@ -2,7 +2,7 @@ const {
 	slugifyPackageName,
 	createRepoName,
 	validate,
-	hasCoverage,
+	hasProperty,
 } = require('./lib');
 
 describe('slugifyPackageName', () => {
@@ -38,14 +38,14 @@ describe('createRepoName', () => {
 	});
 });
 
-describe('hasCoverage', () => {
-	it('returns true when coverage is included in first input', () => {
-		expect(hasCoverage({coverage: 1}, {})).toEqual(true);
+describe('hasProperty', () => {
+	it('returns true when property is included in first input', () => {
+		expect(hasProperty('coverage')({coverage: 1}, {})).toEqual(true);
 	});
-	it('returns true when coverage is included in second input', () => {
-		expect(hasCoverage({}, {coverage: 1})).toEqual(true);
+	it('returns true when property is included in second input', () => {
+		expect(hasProperty('coverage')({}, {coverage: 1})).toEqual(true);
 	});
-	it('returns false when coverage is not included in any input', () => {
-		expect(hasCoverage({}, {})).toEqual(false);
+	it('returns false when property is not included in any input', () => {
+		expect(hasProperty('coverage')({}, {})).toEqual(false);
 	});
 });
