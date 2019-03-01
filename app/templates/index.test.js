@@ -1,4 +1,4 @@
-import <%= camelModuleName %> from '.';
+const <%= camelModuleName %> = require '.';
 
 describe('<%= camelModuleName %>', () => {
 	it('Works', () => { expect()});

@@ -7,7 +7,7 @@
 ## Install
 
 ```
-$ yarn install <%= moduleName %>
+$ yarn add <%= moduleName %>
 ```
 
 ## Usage

@@ -1,102 +1,102 @@
 {
-	"name": "generator-gemod",
-	"version": "0.4.1",
-	"description": "Opinionated node module generator",
-	"license": "MIT",
-	"repository": "george-aidonidis/generator-gemod",
-	"author": {
-		"name": "George Aidonidis",
-		"email": "georgeaidonidis@gmail.com",
-		"url": "https://georgeaidonidis.com"
-	},
-	"engines": {
-		"node": ">=6"
-	},
-	"scripts": {
-		"lint": "xo",
-		"codecov": "codecov",
-		"test": "jest"
-	},
-	"files": [
-		"app"
-	],
-	"keywords": [
-		"yeoman-generator",
-		"plugin",
-		"boilerplate",
-		"template",
-		"scaffold",
-		"node",
-		"module",
-		"node_module",
-		"node-module",
-		"init"
-	],
-	"dependencies": {
-		"@sindresorhus/slugify": "^0.8.0",
-		"camelcase": "^5.0.0",
-		"humanize-url": "^2.0.0",
-		"is-scoped": "^1.0.0",
-		"normalize-url": "^4.2.0",
-		"ramda": "^0.26.1",
-		"superb": "^3.0.0",
-		"yeoman-generator": "^3.1.1"
-	},
-	"devDependencies": {
-		"codecov": "^3.2.0",
-		"husky": "^1.3.1",
-		"jest": "^24.1.0",
-		"lint-staged": "^8.1.4",
-		"pify": "^4.0.1",
-		"xo": "^0.24.0",
-		"yeoman-assert": "^3.0.0",
-		"yeoman-test": "^1.0.0"
-	},
-	"jest": {
-		"coverageDirectory": "./coverage/",
-		"setupFiles": [
-			"./app/setup-test"
-		],
-		"coveragePathIgnorePatterns": [
-			"/node_modules/",
-			"temp",
-			"templates"
-		],
-		"watchPathIgnorePatterns": [
-			"/node_modules/",
-			"app/temp",
-			"app/templates"
-		],
-		"testPathIgnorePatterns": [
-			"/node_modules/",
-			"temp",
-			"templates"
-		]
-	},
-	"lint-staged": {
-		"*": [
-			"xo --fix",
-			"git add"
-		]
-	},
-	"xo": {
-		"ignores": [
-			"app/templates/**"
-		],
-		"prettier": true,
-		"envs": [
-			"jest",
-			"node",
-			"browser"
-		],
-		"rules": {
-			"camelcase": 1
-		}
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged",
-			"pre-push": "yarn test"
-		}
-	}
+  "name": "generator-gemod",
+  "version": "0.4.1",
+  "description": "Opinionated node module generator",
+  "license": "MIT",
+  "repository": "george-aidonidis/generator-gemod",
+  "author": {
+    "name": "George Aidonidis",
+    "email": "georgeaidonidis@gmail.com",
+    "url": "https://georgeaidonidis.com"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "lint": "xo",
+    "codecov": "codecov",
+    "test": "jest"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "plugin",
+    "boilerplate",
+    "template",
+    "scaffold",
+    "node",
+    "module",
+    "node_module",
+    "node-module",
+    "init"
+  ],
+  "dependencies": {
+    "@sindresorhus/slugify": "^0.8.0",
+    "camelcase": "^5.0.0",
+    "humanize-url": "^2.0.0",
+    "is-scoped": "^1.0.0",
+    "normalize-url": "^4.2.0",
+    "ramda": "^0.26.1",
+    "superb": "^3.0.0",
+    "yeoman-generator": "^3.1.1"
+  },
+  "devDependencies": {
+    "codecov": "^3.2.0",
+    "husky": "^1.3.1",
+    "jest": "^24.1.0",
+    "lint-staged": "^8.1.4",
+    "pify": "^4.0.1",
+    "xo": "^0.24.0",
+    "yeoman-assert": "^3.0.0",
+    "yeoman-test": "^1.0.0"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "setupFiles": [
+      "./app/setup-test"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "temp",
+      "templates"
+    ],
+    "watchPathIgnorePatterns": [
+      "/node_modules/",
+      "app/temp",
+      "app/templates"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "temp",
+      "templates"
+    ]
+  },
+  "lint-staged": {
+    "*": [
+      "xo --fix",
+      "git add"
+    ]
+  },
+  "xo": {
+    "ignores": [
+      "app/templates/**"
+    ],
+    "prettier": true,
+    "envs": [
+      "jest",
+      "node",
+      "browser"
+    ],
+    "rules": {
+      "camelcase": 1
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn test"
+    }
+  }
 }
