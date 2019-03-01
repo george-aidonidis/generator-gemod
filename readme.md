@@ -2,6 +2,8 @@
 
 > Scaffold out a [node module](https://github.com/george-aidonidis/generator-gemod)
 
+Generate files with sane defaults to reduce boilerplate
+
 ![gif](https://i.imgur.com/o12gQRh.gif)
 
 ## Install
@@ -40,6 +42,27 @@ $ yo gemod --help
 - Lint code with [xo](https://github.com/xojs/xo) and [prettier](https://github.com/xojs/xo)
 - Run linting before a git commit
 - Run tests before a git push
+
+## Structure
+
+The generated files will look like this:
+
+```
+├── .git
+├── .gitignore
+├── .npmrc
+├── .prettierrc
+├── .travis.yml
+├── .travis.yml
+├── .yo-rc.json
+├── node_modules
+├── index.js
+├── index.test.js
+├── license
+├── package.json
+├── readme.md
+└── yarn.lock
+```
 
 ## Contributing
 
