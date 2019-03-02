@@ -32,11 +32,12 @@ $ yo gemod --help
 
   Options:
     --help          # Print the generator's options and usage
+    --org           # Publish to a GitHub organization account
     --skip-cache    # Do not remember prompt answers                      Default: false
     --skip-install  # Do not automatically install dependencies           Default: false
-    --org           # Publish to a GitHub organization account
-    --coverage      # Add jest's code coverage (uploads to codecov.io)
-    --deploy        # Adds a step to travis to deploy the module to npm (needs a `$NPM_TOKEN` env variable on travis-ci)
+    --coverage      # Add jest's code coverage (uploads to codecov.io)    Default: false
+    --deploy        # Adds a step to travis to deploy the module to npm   Default: false
+		    # (needs `$NPM_TOKEN` env variable on travis-ci)
 ```
 
 ## Development tools
