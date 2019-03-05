@@ -7,7 +7,7 @@
   "author": {
     "name": "George Aidonidis",
     "email": "georgeaidonidis@gmail.com",
-    "url": "https://georgeaidonidis.com"
+    "url": "https://iamgeorge.dev"
   },
   "engines": {
     "node": ">=6"
@@ -34,7 +34,7 @@
   ],
   "dependencies": {
     "@sindresorhus/slugify": "^0.8.0",
-    "camelcase": "^5.0.0",
+    "camelcase": "^5.2.0",
     "humanize-url": "^2.0.0",
     "is-scoped": "^1.0.0",
     "normalize-url": "^4.2.0",

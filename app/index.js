@@ -1,5 +1,4 @@
 const superb = require('superb');
-const {has} = require('ramda');
 const normalizeUrl = require('normalize-url');
 const humanizeUrl = require('humanize-url');
 const Generator = require('yeoman-generator');
@@ -78,14 +77,6 @@ module.exports = class extends Generator {
 			const coverage = hasProperty('coverage')(this.options, props);
 			const deploy = hasProperty('deploy')(this.options, props);
 			const repoName = createRepoName(props.moduleName);
-			console.log(
-				`Deploy is : ${has('deploy')(this.options)} ${has('deploy')(props)}`,
-			);
-			console.log(
-				`Deploy is : ${has('coverage')(this.options)} ${has('coverage')(
-					props,
-				)}`,
-			);
 
 			const tpl = {
 				moduleName: props.moduleName,
