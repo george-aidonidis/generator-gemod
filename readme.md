@@ -1,6 +1,6 @@
 # generator-gemod
 
-[![Build Status](https://travis-ci.org/George-Aidonidis/generator-gemod.svg?branch=master)](https://travis-ci.org/George-Aidonidis/generator-gemod) [![codecov](https://codecov.io/gh/George-Aidonidis/generator-gemod/badge.svg?branch=master)](https://codecov.io/gh/George-Aidonidis/generator-gemod?branch=master) [![NPM version](https://img.shields.io/npm/v/generator-gemod.svg?style=flat)](https://www.npmjs.com/package/generator-gemod)
+[![Build Status](https://travis-ci.org/george-aidonidis/generator-gemod.svg?branch=master)](https://travis-ci.org/george-aidonidis/generator-gemod) [![codecov](https://codecov.io/gh/george-aidonidis/generator-gemod/badge.svg?branch=master)](https://codecov.io/gh/george-aidonidis/generator-gemod?branch=master) [![NPM version](https://img.shields.io/npm/v/generator-gemod.svg?style=flat)](https://www.npmjs.com/package/generator-gemod)
 
 > Scaffold out a [node module](https://github.com/george-aidonidis/generator-gemod)
 
