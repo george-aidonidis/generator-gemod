@@ -1,5 +1,5 @@
-const <%= camelModuleName %> = require '.';
+const <%= camelModuleName %> = require('.');
 
 describe('<%= camelModuleName %>', () => {
-	it('Works', () => { expect()});
+	it('Works', () => { expect(<%= camelModuleName %>())});
 });
