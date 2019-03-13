@@ -33,7 +33,7 @@
     "init"
   ],
   "dependencies": {
-    "@sindresorhus/slugify": "^0.8.0",
+    "@sindresorhus/slugify": "^0.9.0",
     "camelcase": "^5.2.0",
     "humanize-url": "^2.0.0",
     "is-scoped": "^1.0.0",
