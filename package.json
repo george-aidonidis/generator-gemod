@@ -36,7 +36,7 @@
     "@sindresorhus/slugify": "^0.9.0",
     "camelcase": "^5.2.0",
     "humanize-url": "^2.0.0",
-    "is-scoped": "^1.0.0",
+    "is-scoped": "^2.0.0",
     "normalize-url": "^4.2.0",
     "ramda": "^0.26.1",
     "superb": "^3.0.0",
