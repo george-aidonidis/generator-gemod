@@ -2930,9 +2930,9 @@ is-scoped@^1.0.0:
     scoped-regex "^1.0.0"
 
 is-scoped@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/is-scoped/-/is-scoped-2.0.0.tgz#526329fb35d126161f9417851287bbfdd18735ae"
-  integrity sha512-69xmf0zbk2jMLZl9luJmmPVhLo7l1GOzGqXGuFVxtxUAPFNTQKMQhpDqc3YISdtT+JN1wgRmKKNDUG2vOH0Ctw==
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/is-scoped/-/is-scoped-2.1.0.tgz#fef0713772658bdf5bee418608267ddae6d3566d"
+  integrity sha512-Cv4OpPTHAK9kHYzkzCrof3VJh7H/PrG2MBUMvvJebaaUMbqhm0YAtXnvh0I3Hnj2tMZWwrRROWLSgfJrKqWmlQ==
   dependencies:
     scoped-regex "^2.0.0"
 
