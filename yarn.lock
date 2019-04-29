@@ -2567,11 +2567,11 @@ https-proxy-agent@^2.2.1:
     debug "^3.1.0"
 
 humanize-url@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/humanize-url/-/humanize-url-2.0.0.tgz#59bbec05f695bb6aa21788b0b51e19cb6b090f31"
-  integrity sha512-EdWOGo4/tLHv1lmmrHzYJoo1iL8GS+iCfUgvQn+qPlFs8AIcgpoL7B8JAOYo4BoERnSmEwQHtztWXLSXsBAtqA==
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/humanize-url/-/humanize-url-2.1.0.tgz#329738ea1e18bce270129ee30a7f2757c53866d5"
+  integrity sha512-Z/F04Y4/VGDuUyUhwbK8NaW5gd8HqjinDMMTfBwviGblt9VUlyog6TEff+BVEh2COXgIehQ/m3Pza0uUx7h1sQ==
   dependencies:
-    normalize-url "^4.0.0"
+    normalize-url "^4.3.0"
 
 husky@^1.3.1:
   version "1.3.1"
@@ -4308,10 +4308,10 @@ normalize-path@^2.1.1:
   dependencies:
     remove-trailing-separator "^1.0.1"
 
-normalize-url@^4.0.0, normalize-url@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-4.2.0.tgz#e747f16b58e6d7f391495fd86415fa04ec7c9897"
-  integrity sha512-n69+KXI+kZApR+sPwSkoAXpGlNkaiYyoHHqKOFPjJWvwZpew/EjKvuPE4+tStNgb42z5yLtdakgZCQI+LalSPg==
+normalize-url@^4.2.0, normalize-url@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-4.3.0.tgz#9c49e10fc1876aeb76dba88bf1b2b5d9fa57b2ee"
+  integrity sha512-0NLtR71o4k6GLP+mr6Ty34c5GA6CMoEsncKJxvQd8NzPxaHRJNnb5gZE8R1XF4CPIS7QPHLJ74IFszwtNVAHVQ==
 
 npm-bundled@^1.0.1:
   version "1.0.6"
