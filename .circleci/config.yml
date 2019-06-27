@@ -5,6 +5,7 @@ aliases:
 
   - &npmrc |
     echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
+    export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
 
   - &save-yarn-cache
     name: Save package Cache
@@ -14,6 +15,8 @@ aliases:
     key: yarn-packages-{{ checksum "yarn.lock" }}
 
   - &yarn-install |
+    yarn global add yo generator-gemod
+    yo doctor
     yarn install --non-interactive --cache-folder ~/.cache/yarn
 
   - &yarn-test |
