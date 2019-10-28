@@ -1546,6 +1546,11 @@ diff@^3.5.0:
   resolved "https://registry.yarnpkg.com/diff/-/diff-3.5.0.tgz#800c0dd1e0a8bfbc95835c202ad220fe317e5a12"
   integrity sha512-A46qtFgd+g7pDZinpnwiRJtxbC1hpgf0uzP3iG89scHk0AUC7A1TGxf5OiiOUv/JMZR8GOt8hL900hV0bOy5xA==
 
+diff@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/diff/-/diff-4.0.1.tgz#0c667cb467ebbb5cea7f14f135cc2dba7780a8ff"
+  integrity sha512-s2+XdvhPCOF01LRQBC8hf4vhbVmI2CGS5aZnxLJlT5FtdhPCDFq80q++zK2KlrVorVDdL5BOGZ/VfLrVtYNF+Q==
+
 dir-glob@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/dir-glob/-/dir-glob-2.0.0.tgz#0b205d2b6aef98238ca286598a8204d29d0a0034"
@@ -4129,12 +4134,7 @@ lodash.zip@^4.2.0:
   resolved "https://registry.yarnpkg.com/lodash.zip/-/lodash.zip-4.2.0.tgz#ec6662e4896408ed4ab6c542a3990b72cc080020"
   integrity sha1-7GZi5IlkCO1KtsVCo5kLcswIACA=
 
-lodash@^4.13.1, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.2:
-  version "4.17.14"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.14.tgz#9ce487ae66c96254fe20b599f21b6816028078ba"
-  integrity sha512-mmKYbW3GLuJeX+iGP+Y7Gp1AiGHGbXHCOh/jZmrawMmsE7MS4znI3RL2FsjbqOyMayHInjOeykW7PEajUk1/xw==
-
-lodash@^4.17.12, lodash@^4.17.14:
+lodash@^4.13.1, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.14, lodash@^4.17.2:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
@@ -6892,9 +6892,9 @@ yeoman-generator@^3.1.1:
     yeoman-environment "^2.0.5"
 
 yeoman-generator@^4.0.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/yeoman-generator/-/yeoman-generator-4.1.0.tgz#dae31db7934c6d815338f7354a851a4c39aa8735"
-  integrity sha512-AULpLsX2CYr0sweIp03isXTl17YkBOOrqzpnErtYr0pUZz4ICqvJbvDPaC/ETMyf0bXHiuY56ATxSKDC/AXHWw==
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/yeoman-generator/-/yeoman-generator-4.2.0.tgz#18fcf671e38a5eb5ec87aeaa862383b6075be31c"
+  integrity sha512-9+PXgEXm8U31mgigU064vSOzeQg/s5GUG0iF6cXaozV+CKf/iaioZ9n12iYh6ctVsS6I3lksriLGH+LmioA6lA==
   dependencies:
     async "^2.6.2"
     chalk "^2.4.2"
@@ -6903,7 +6903,7 @@ yeoman-generator@^4.0.0:
     dargs "^6.1.0"
     dateformat "^3.0.3"
     debug "^4.1.1"
-    detect-conflict "^1.0.0"
+    diff "^4.0.1"
     error "^7.0.2"
     find-up "^3.0.0"
     github-username "^3.0.0"
