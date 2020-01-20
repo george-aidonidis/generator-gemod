@@ -46,7 +46,7 @@
     "codecov": "^3.2.0",
     "husky": "^4.0.0",
     "jest": "^24.1.0",
-    "lint-staged": "^9.2.0",
+    "lint-staged": "^10.0.0",
     "pify": "^4.0.1",
     "xo": "^0.25.3",
     "yeoman-assert": "^3.0.0",
