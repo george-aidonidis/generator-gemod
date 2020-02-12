@@ -338,9 +338,9 @@
   integrity sha512-9NET910DNaIPngYnLLPeg+Ogzqsi9uM4mSboU5y6p8S5DzMTVEsJZrawi+BoDNUVBa2DhJqQYUFvMDfgU062LQ==
 
 "@sindresorhus/slugify@^0.10.0":
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/@sindresorhus/slugify/-/slugify-0.10.0.tgz#8878609a6a468a110690abbfb65171769cd9a8d4"
-  integrity sha512-R/3PVAS0rIbrH/qJRb4ma/5pG3oyQKW1Ws4bsc/Fscfb6HWeB0CNWD3bnPAiWi5PYLnl33TcsXCKXNOPwBpyaw==
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/@sindresorhus/slugify/-/slugify-0.10.1.tgz#11599993223cb91c64f363a0b231a3e90aeff212"
+  integrity sha512-dDnXnSM7STZqwfMCUebIHMJqS09DajuLyNyencBMUspzYKfgx/r66ui0hsClKPPJp9pmPvN+QTxPK+XGLhvY0w==
   dependencies:
     escape-string-regexp "^2.0.0"
     lodash.deburr "^4.1.0"
