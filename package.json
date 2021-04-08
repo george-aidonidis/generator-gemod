@@ -37,7 +37,7 @@
     "camelcase": "^6.0.0",
     "humanize-url": "^2.0.0",
     "is-scoped": "^2.0.0",
-    "normalize-url": "^5.0.0",
+    "normalize-url": "^6.0.0",
     "ramda": "^0.27.0",
     "superb": "^4.0.0",
     "yeoman-generator": "^4.0.0"
