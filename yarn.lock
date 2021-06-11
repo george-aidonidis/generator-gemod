@@ -4221,12 +4221,12 @@ is-scoped@^1.0.0:
   dependencies:
     scoped-regex "^1.0.0"
 
-is-scoped@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/is-scoped/-/is-scoped-2.1.0.tgz#fef0713772658bdf5bee418608267ddae6d3566d"
-  integrity sha512-Cv4OpPTHAK9kHYzkzCrof3VJh7H/PrG2MBUMvvJebaaUMbqhm0YAtXnvh0I3Hnj2tMZWwrRROWLSgfJrKqWmlQ==
+is-scoped@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/is-scoped/-/is-scoped-3.0.0.tgz#2f9fc6e37c17d432d8e38d3c749aab8c76d1bdd8"
+  integrity sha512-ezxLUq30kiTvP0w/5n9tj4qTOKlrA07Oty1hwTQ+lcqw11x6uc8sp7VRb2OVGRzKfCHZ2A22T5Zsau/Q2Akb0g==
   dependencies:
-    scoped-regex "^2.0.0"
+    scoped-regex "^3.0.0"
 
 is-stream@^1.0.0, is-stream@^1.1.0:
   version "1.1.0"
@@ -6699,10 +6699,10 @@ scoped-regex@^1.0.0:
   resolved "https://registry.yarnpkg.com/scoped-regex/-/scoped-regex-1.0.0.tgz#a346bb1acd4207ae70bd7c0c7ca9e566b6baddb8"
   integrity sha1-o0a7Gs1CB65wvXwMfKnlZra63bg=
 
-scoped-regex@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/scoped-regex/-/scoped-regex-2.0.0.tgz#2029bb0eff156c297ae02302563d513560a233f9"
-  integrity sha512-BYJVYS0gvlvrEp6IWzCcbEqpL4di9qmnMY8klkJHGnvVmUNYA9IERc+dUQLDx2d6Sb6PYp9jRSdH3BnUBSAkPQ==
+scoped-regex@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/scoped-regex/-/scoped-regex-3.0.0.tgz#cd7ede7d942f2ae90da53272102ff2d73129c46f"
+  integrity sha512-yEsN6TuxZhZ1Tl9iB81frTNS292m0I/IG7+w8lTvfcJQP2x3vnpOoevjBoE3Np5A6KnZM2+RtVenihj9t6NiYg==
 
 semver-compare@^1.0.0:
   version "1.0.0"
