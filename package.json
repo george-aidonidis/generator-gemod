@@ -35,7 +35,7 @@
   "dependencies": {
     "@sindresorhus/slugify": "^1.0.0",
     "camelcase": "^6.0.0",
-    "humanize-url": "^2.0.0",
+    "humanize-url": "^3.0.0",
     "is-scoped": "^2.0.0",
     "normalize-url": "^5.0.0",
     "ramda": "^0.27.0",
